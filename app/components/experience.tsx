@@ -6,7 +6,7 @@ export default async function Experience() {
         <section className="py-8">
             <h1 className="justify-self-center text-xl">Experiences</h1>
             <div className="max-w-3xl mx-auto px-4">
-                {/* {experiences.map(experience => (
+                {experiences.map(experience => (
                     <div key={experience.id} className="mb-8 pb-6 border-b border-gray-200">
                         <h3 className="font-semibold">{experience.company_name}</h3>
                         <div className="mt-1 mb-3">
@@ -23,7 +23,7 @@ export default async function Experience() {
                             ))}
                         </ul>
                     </div>
-                ))} */}
+                ))}
             </div>
         </section>
     )
