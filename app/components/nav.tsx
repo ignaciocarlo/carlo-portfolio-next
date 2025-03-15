@@ -7,7 +7,7 @@ export function Navbar() {
           id="nav"
         >
           <div className="flex flex-row space-x-0 pr-10">
-            PlaceHolder
+            cccsssiii
           </div>
         </nav>
       </div>

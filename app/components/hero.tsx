@@ -12,8 +12,8 @@ export default function Hero() {
                 height={200}
                 alt='Carlo Ignacio'
             />
-            <div className={`text-center font-semibold ${inter.className}`}>
-                <p className='mt-3 text-2xl'>Carlo Ignacio</p>
+            <div className={`text-center font-semibold ${inter.className} mb-2`}>
+                <p className='mt-3 font-semibold text-2xl'>Carlo Ignacio</p>
                 <p className='text-xs'>Software Developer</p>
             </div>
             <Socials />

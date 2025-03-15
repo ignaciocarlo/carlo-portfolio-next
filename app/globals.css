@@ -8,6 +8,7 @@
 html {
   background-color: var(--background-base);
   color: var(--text-color-base);
+  scroll-behavior: smooth;
 }
 
 .section {

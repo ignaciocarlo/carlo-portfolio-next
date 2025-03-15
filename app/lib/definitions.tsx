@@ -3,6 +3,13 @@ export type Description = {
   description: string;
 }
 
+export type Skill = {
+  id: number;
+  title: string;
+  src: string;
+  type: string;
+}
+
 export type Experience = {
   id: number;
   company_name: string;
@@ -16,4 +23,5 @@ export type Social = {
   id: number;
   title: string;
   link: string;
+  src: string;
 }

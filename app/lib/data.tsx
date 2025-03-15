@@ -1,20 +1,27 @@
 import postgres from 'postgres';
-import { Experience, Social } from './definitions';
+import { Experience, Skill, Social } from './definitions';
 
-const sql = postgres(process.env.POSTGRES_URL!, { ssl: 'require' });
+const sql = postgres(process.env.POSTGRES_URL!, { ssl: 'require', prepare: false });
 
-export async function getSocials(): Promise<Social[]> {
-    const socials = await sql<{
-        id: number;
-        title: string;
-        link: string;
-    }[]>`SELECT * FROM socials`;
-    
+export async function getSocials() {
+    const socials = await sql<Social[]>
+                        `SELECT * FROM socials`;
+
     return socials;
 }
 
+export async function getSkills() {
+    const skills = await sql<{
+        id: number;
+        title: string;
+        src: string;
+    }[]>
+                        `SELECT * FROM skills`
+                        
+    return skills;
+}
 
-export async function getExperiences(): Promise<Experience[]> {
+export async function getExperiences() {
     const results = await sql<{
         id: number;
         company_name: string;
@@ -28,7 +35,7 @@ export async function getExperiences(): Promise<Experience[]> {
                ed.id as description_id, ed.description
         FROM experiences AS e
         LEFT JOIN experiences_description AS ed ON ed.experiences_id = e.id
-        ORDER BY e.id
+        ORDER BY e.date_hired DESC
     `;
     
     if (!results || results.length === 0) {

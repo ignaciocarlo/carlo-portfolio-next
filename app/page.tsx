@@ -1,13 +1,15 @@
 import Hero from "./components/hero";
 import AboutMe from "./components/aboutme";
-import Experience from "./components/experience";
+import Experiences from "./components/experiences";
+import Skills from "./components/skills";
 
 export default function Home() {
   return (
     <>
       <Hero />
       <AboutMe />
-      <Experience />
+      <Skills />
+      <Experiences />
     </>
   );
 }
