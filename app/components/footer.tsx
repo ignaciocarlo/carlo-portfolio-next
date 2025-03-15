@@ -19,7 +19,7 @@ function ArrowIcon() {
     return (
       <footer className="mb-16">
         <p className="mt-8 text-neutral-600 dark:text-neutral-300">
-          © {new Date().getFullYear()} Carlo Ignacio
+          © {new Date().getFullYear()} {'Carlo Ignacio - work in progress! :]'}
         </p>
       </footer>
     )

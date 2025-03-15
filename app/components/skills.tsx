@@ -6,7 +6,8 @@ export default async function Skills() {
 
     return (
         <section className="mb-12">
-            <h1 className="text-xl font-semibold mb-2">Skills</h1>
+            <h1 className="text-xl font-semibold mb-5">Skills</h1>
+            <p className="mb-5">The professional toolkit of technologies, frameworks, and development environments I leverage to deliver robust solutions.</p>
             <div className="flex flex-row flex-wrap gap-3">
                 {
                     skills.map(skill => (

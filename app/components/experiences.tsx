@@ -4,10 +4,10 @@ export default async function Experiences() {
     const experiences = await getExperiences();
     return (
         <section>
-            <h1 className="text-xl font-semibold mb-2">Experiences</h1>
+            <h1 className="text-xl font-semibold mb-5">Experiences</h1>
             <div className="max-w-3xl mx-auto">
                 {experiences.map(experience => (
-                    <div key={experience.id} className="mb-8 pb-6 border-b border-gray-200">
+                    <div key={experience.id} className="mb-8 pb-6">
                         <h3>{experience.company_name}</h3>
                         <div className="mt-1 mb-3">
                             <p className="text-sm">
