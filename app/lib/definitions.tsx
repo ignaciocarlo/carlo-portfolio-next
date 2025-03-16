@@ -13,6 +13,7 @@ export type Skill = {
 export type Experience = {
   id: number;
   company_name: string;
+  position: string;
   date_hired: Date;
   date_resigned: Date | null;
   is_current_company: boolean;

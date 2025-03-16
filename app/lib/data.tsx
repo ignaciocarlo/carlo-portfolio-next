@@ -25,13 +25,14 @@ export async function getExperiences() {
     const results = await sql<{
         id: number;
         company_name: string;
+        position: string;
         date_hired: Date;
         date_resigned: Date | null;
         is_current_company: boolean;
         description_id: number | null;
         description: string | null;
     }[]>`
-        SELECT e.id, e.company_name, e.date_hired, e.date_resigned, e.is_current_company, 
+        SELECT e.id, e.company_name, e.position, e.date_hired, e.date_resigned, e.is_current_company, 
                ed.id as description_id, ed.description
         FROM experiences AS e
         LEFT JOIN experiences_description AS ed ON ed.experiences_id = e.id
@@ -50,6 +51,7 @@ export async function getExperiences() {
             experienceMap[row.id] = {
                 id: row.id,
                 company_name: row.company_name,
+                position: row.position,
                 date_hired: row.date_hired,
                 date_resigned: row.date_resigned,
                 is_current_company: row.is_current_company,
