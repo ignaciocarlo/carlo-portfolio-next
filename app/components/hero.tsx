@@ -6,7 +6,7 @@ export default function Hero() {
     return (
         <section>
             <Image
-                className='justify-self-center border-1 rounded-xl rounded'
+                className='block mx-auto border-1 rounded-xl rounded'
                 src={'/images/Carlo.png'}
                 width={170}
                 height={200}
