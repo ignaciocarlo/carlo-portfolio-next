@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import { Navbar } from "./components/nav";
 import Footer from "./components/footer";
-import { inter } from "./ui/fonts";
+import { poppins } from "./ui/fonts";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -20,8 +19,8 @@ export default function RootLayout({
       lang="en"
       className='text-black bg-white dark:text-white dark:bg-black'
     >
-      <body className={`antialiased max-w-3xl mx-2 mt-6 mx-auto ${inter.className}`}>
-        <main className="flex-auto min-w-0 mt-4 flex flex-col px-0 md:px-0">
+      <body className={`antialiased max-w-3xl mx-2 mt-6 mx-auto ${poppins.className}`}>
+        <main className="flex-auto min-w-0 mt-4 flex flex-col px-4 sm:px-6 md:px-8">
           <Navbar />
           {children}
           <Footer />
