@@ -11,7 +11,7 @@ export default async function Socials() {
             <div key={social.id}>
                 <Link href={social.link} target="_blank">
                     <Image
-                        className="invert brightness-0"
+                        className="dark:invert brightness-0"
                         src={social.src}
                         alt={social.title}
                         width={25}

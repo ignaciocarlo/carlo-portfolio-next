@@ -12,7 +12,7 @@ export default async function Skills() {
                 {
                     skills.map(skill => (
                         <Image
-                            className="invert brightness-0"
+                          
                             key={skill.title}
                             src={skill.src}
                             alt={skill.title}

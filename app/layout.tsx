@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Navbar } from "./components/nav";
 import Footer from "./components/footer";
+import { ThemeProvider } from "./components/theme-provider";
 import { poppins } from "./ui/fonts";
 import "./globals.css";
 
@@ -15,16 +16,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className='text-black bg-white dark:text-white dark:bg-black'
-    >
+    <html lang="en" suppressHydrationWarning>
       <body className={`antialiased max-w-3xl mx-2 mt-6 mx-auto ${poppins.className}`}>
-        <main className="flex-auto min-w-0 mt-4 flex flex-col px-4 sm:px-6 md:px-8">
-          <Navbar />
-          {children}
-          <Footer />
-        </main>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <main className="flex-auto min-w-0 mt-4 flex flex-col px-4 sm:px-6 md:px-8">
+            <Navbar />
+            {children}
+            <Footer />
+          </main>
+        </ThemeProvider>
       </body>
     </html>
   );

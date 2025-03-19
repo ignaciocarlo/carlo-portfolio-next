@@ -1,5 +1,5 @@
 import { getExperiences } from "../lib/data";
-import { calculateDuration } from "../utils/dateutils";
+import { calculateDuration } from "../utils/date-utils";
 
 export default async function Experiences() {
     const experiences = await getExperiences();
