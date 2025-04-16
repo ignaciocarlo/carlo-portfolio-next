@@ -4,6 +4,7 @@ import Footer from "./components/footer";
 import { ThemeProvider } from "./components/theme-provider";
 import { poppins } from "./ui/fonts";
 import "./globals.css";
+import { Analytics } from '@vercel/analytics/next';
 
 export const metadata: Metadata = {
   title: "Carlo Ignacio",
@@ -28,6 +29,7 @@ export default function RootLayout({
             <Navbar />
             {children}
             <Footer />
+            <Analytics />
           </main>
         </ThemeProvider>
       </body>
